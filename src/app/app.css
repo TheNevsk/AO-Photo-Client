@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Cascadia Code", Arial, sans-serif;
   color: #333;
 }
 
@@ -46,10 +46,37 @@ p {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Hover effect */
-.gallery img:hover {
+.gallery .labeled-image {
+  position: relative;
+  text-align: center;
+  color: #555555;
+  font-size: 2rem;
+}
+
+.gallery .labeled-image:hover > img{
   transform: scale(1.03);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  opacity: 0.3;
+}
+
+.gallery .labeled-image .label {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.gallery .labeled-image:hover > .label {
+  opacity: 1;
+}
+
+.gallery .labeled-image .bottom-right {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+}
+
+.gallery .labeled-image .center {
+  position: relative;
+  bottom: 50%;
 }
 
 /* Mobile adjustments */
