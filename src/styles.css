@@ -1,5 +1,6 @@
 body {
-  background-image: url("https://ayala-olier-photography.onrender.com/images/background.JPG");
+  /*background-image: url("https://ayala-olier-photography.onrender.com/images/background.JPG");*/
+  background-image: url("http://localhost:4200/images/background.JPG");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
