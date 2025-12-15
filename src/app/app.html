@@ -1,37 +1,9 @@
-<div class="container">
-  <header>
-    <!-- Left Side -->
-    <div class="title-area">
-      <h1>Ayala Olier Photography</h1>
-    </div>
+<div class="container" id="home">
+  <h1>AYALA OLIER PHOTOGRAPHY</h1>
 
-    <!-- Right Side Contact Section -->
-    <div class="contact-area">
-      <h3>Contact Me</h3>
-      <ul class="contact-list">
-        <li>
-          <fa-icon [icon]="icons.get('mail')" />
-          <a href="mailto:your-email@example.com">your-email@example.com</a>
-        </li>
-        <li>
-          <fa-icon [icon]="icons.get('fb')" />
-          <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
-        </li>
-        <li>
-          <fa-icon [icon]="icons.get('ig')" />
-          <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-
-  <h4>Hello, I'm Ayala</h4>
-
-  <p>
-    I’m a photographer who is passionate about documenting real moments in time.<br>
-    My dream is to cover the entire exterior of the Carmelit with abstractly composed animal photos.<br>
-    Check out some of my work below.
-  </p>
+  <h4>
+    Click to see some of my work below:
+  </h4>
 
   <div class="gallery">
     <div class="labeled-image">
@@ -46,8 +18,43 @@
       <img src="images/guitar.JPG" alt="Sample Photo 3" />
       <div class="label center">Decadence</div>
     </div>
-
-
-
   </div>
+
+  <footer class="contact-footer">
+    <div class="contact-wrapper">
+
+      <!-- LEFT: TEXT CONTENT -->
+      <div class="contact-text">
+        <h2>Get in Touch</h2>
+        <p>
+          Interested in working together or have a question?
+          Feel free to reach out and I’ll get back to you as soon as possible.
+        </p>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <form class="contact-form" action="#" method="post">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Name" required>
+        </div>
+
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="form-group">
+          <textarea name="message" placeholder="How can I help?" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+
+    </div>
+
+    <!-- BACK TO TOP -->
+    <div class="back-to-top-wrapper">
+      <a href="#home" class="back-to-top-link">back to top ↑</a>
+    </div>
+  </footer>
+
 </div>
