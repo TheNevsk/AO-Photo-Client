@@ -10,17 +10,27 @@
       </p>
     </div>
 
-    <form class="contact-form" action="#" method="post">
+    <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" formControlName="name" placeholder="Name">
+        <small class="invisible-text" [class.visible-text]="submitted && contactForm.get('name')?.errors?.['required']">
+          Name is required
+        </small>
       </div>
 
       <div class="form-group">
-        <input type="email" name="email" placeholder="Email" required>
+        <input type="email" formControlName="email" placeholder="Email">
+        <small class="invisible-text" [class.visible-text]="submitted && contactForm.get('email')?.errors">
+          @if (contactForm.get('email')?.errors?.['required']) {Email is required}
+          @else {Invalid Email}
+        </small>
       </div>
 
       <div class="form-group">
-        <textarea name="message" placeholder="How can I help?" rows="5" required></textarea>
+        <textarea formControlName="message" placeholder="How can I help?" rows="5"></textarea>
+        <small class="invisible-text" [class.visible-text]="submitted && contactForm.get('message')?.errors?.['required']">
+          Message is required
+        </small>
       </div>
 
       <button type="submit" class="submit-btn">Send Message</button>

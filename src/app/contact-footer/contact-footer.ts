@@ -1,12 +1,31 @@
 import { Component } from '@angular/core';
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import {CommonModule} from '@angular/common';
+import {BackendService} from '../../shared/services/backend-service';
 
 @Component({
   standalone: true,
   selector: 'app-contact-footer',
-  imports: [],
+  imports: [ReactiveFormsModule, CommonModule, FormsModule],
   templateUrl: './contact-footer.html',
   styleUrl: './contact-footer.css',
 })
 export class ContactFooter {
+  contactForm: FormGroup;
+  submitted = false;
+  constructor(private fb: FormBuilder, private server: BackendService) {
+    this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required]
+    });
+  }
 
+  onSubmit() {
+    this.submitted = true;
+    debugger;
+    if (this.contactForm.valid) {
+      this.server.sendEmail(this.contactForm.value);
+    }
+  }
 }

@@ -81,6 +81,15 @@
   line-height: 1.6;
 }
 
+/* ===== FORM VALIDATION ===== */
+.invisible-text {
+  opacity: 0;
+}
+
+.visible-text {
+  opacity: 1;
+}
+
 /* ===== BACK TO TOP ===== */
 .back-to-top-wrapper {
   margin-top: 3rem;

@@ -12,10 +12,8 @@ import {ContactFooter} from './contact-footer/contact-footer';
 })
 export class App {
   protected readonly title = signal('AO-Photo-Client');
-  private server: BackendService;
-  constructor(server: BackendService) {
+  constructor(private server: BackendService) {
     //acquire contact-me icons from font-awesome
-    this.server = server;
     this.server.callPrivateRoute();
   }
 }
