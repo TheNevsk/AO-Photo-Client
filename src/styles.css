@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Island-Moments";
+  src: url(assets/IslandMoments-Regular.ttf) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair-Display";
+  src: url(assets/PlayfairDisplay-VariableFont_wght.ttf) format('truetype');
+  font-display: swap;
+}
+
 body {
   background-image: url("https://ayala-olier-photography.onrender.com/images/background.JPG");
   background-repeat: no-repeat;

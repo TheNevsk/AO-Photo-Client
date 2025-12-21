@@ -30,6 +30,7 @@
 .contact-form input,
 .contact-form textarea {
   font-family: inherit;
+  font-weight: inherit;
   width: 100%;
   padding: .9rem 1rem;
   background: #555;
