@@ -4,10 +4,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: left;
-  /*font-family: "Cascadia Code", Arial, sans-serif;*/
-  font-family: "Playfair-Display", sans-serif;
-  font-weight: bold;
-  color: #333;
+  font-family: "Dubai Light", sans-serif;
+  color: black;
   background: rgba(255, 255, 255, 0.7);
 }
 
@@ -23,7 +21,6 @@ h4 {
   font-weight: normal;
   margin-top: 0.5rem;
   font-size: 1.4rem;
-  color: #555;
 }
 
 /* Paragraph styling */
@@ -31,48 +28,6 @@ p {
   line-height: 1.6;
   font-size: 1.05rem;
   margin-bottom: 2rem;
-}
-
-/* Contact Section */
-.contact-area {
-  text-align: left;      /* Changed from right to left */
-}
-
-.contact-area h3 {
-  margin: 0 0 10px 0;
-  font-size: 20px;
-  color: #333;
-}
-
-.contact-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.contact-list li {
-  margin-bottom: 8px;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-}
-
-.contact-list i {
-  margin-right: 8px;
-  color: #333;
-}
-
-.contact-list a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-.contact-list a:hover {
-  text-decoration: underline;
-}
-
-fa-icon {
-  padding: 5px;
 }
 
 /* Gallery styling */
