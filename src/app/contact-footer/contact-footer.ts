@@ -25,7 +25,7 @@ export class ContactFooter {
     this.submitted = true;
     debugger;
     if (this.contactForm.valid) {
-      this.server.sendEmail(this.contactForm.value);
+      this.server.sendContactMessage(this.contactForm.value);
     }
   }
 }

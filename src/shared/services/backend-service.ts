@@ -6,8 +6,9 @@ export class BackendService {
   private baseUrl = window.location.origin;
   constructor(private http: HttpClient) {}
 
-  public sendEmail(obj: any) {
-    debugger;
+  public sendContactMessage(contactMsg: any) {
+    let url = this.baseUrl + '/api/contact-message';
+    this.http.post(url, contactMsg).subscribe({error: err => {console.log(err.message)}});
   }
 
   public callPrivateRoute() {
