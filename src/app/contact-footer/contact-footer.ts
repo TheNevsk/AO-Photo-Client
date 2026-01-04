@@ -11,6 +11,7 @@ import {BackendService} from '../../shared/services/backend-service';
   styleUrl: './contact-footer.css',
 })
 export class ContactFooter {
+  submitButtonEnabled = true;
   contactForm: FormGroup;
   submitted = false;
   constructor(private fb: FormBuilder, private server: BackendService) {
@@ -23,9 +24,11 @@ export class ContactFooter {
 
   onSubmit() {
     this.submitted = true;
-    debugger;
     if (this.contactForm.valid) {
-      this.server.sendContactMessage(this.contactForm.value);
+      this.server.sendContactMessage(this.contactForm.value).subscribe({
+        error: err => {console.log(err.message)},
+        complete: () => {this.submitButtonEnabled = false;}
+      });
     }
   }
 }
