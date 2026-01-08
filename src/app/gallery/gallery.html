@@ -1,9 +1,13 @@
 <nav>
   <a routerLink=""><h4>← Back to main</h4></a>
 </nav>
-
-<div>
+@if (photoCount > 0) {
+  <div>
   @for (i of photoIndexes; track i) {
     <img src="images/{{name}}/thumbnails/{{name}}{{i+1}}-thumb.PNG" alt="{{i+1}}" />
   }
-</div>
+  </div>
+}
+@else {
+  <h5>Gallery under construction...</h5>
+}
