@@ -2,11 +2,22 @@
   <a routerLink=""><h4>← Back to main</h4></a>
 </nav>
 @if (photoCount > 0) {
-  <div>
+  <div id="gallery">
   @for (i of photoIndexes; track i) {
-    <img src="images/{{name}}/thumbnails/{{name}}{{i+1}}-thumb.PNG" alt="{{i+1}}" />
+    <img class="thumbnail" draggable="false"
+         src="images/{{name}}/thumbnails/{{name}}{{i+1}}-thumb.PNG" alt="{{i+1}}" (click)="open(i+1)"/>
   }
   </div>
+
+  @if (selectedPhoto) {
+    <div id="popup-overlay" (click)="close()">
+      <div class="popup-container">
+        <img class="full-photo" [src]="selectedPhoto" alt="selectedPhoto">
+        <button class="close-btn" (click)="close()">✕</button>
+      </div>
+    </div>
+  }
+
 }
 @else {
   <h5>Gallery under construction...</h5>

@@ -5,3 +5,53 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+/*gallery image pop up styling*/
+#popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+}
+
+.popup-container {
+  position: relative;
+  max-width: 92vw;
+  max-height: 100vh;
+  box-sizing: border-box;
+}
+
+.full-img {
+  object-fit: contain;
+  display: block;
+  border-radius: 4px;
+}
+
+.close-btn {
+  all: unset;
+  position: absolute;
+  top: 5%;
+  right: 3%;
+
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0.9;
+}
+
+.close-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}

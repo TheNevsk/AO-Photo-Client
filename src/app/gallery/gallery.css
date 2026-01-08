@@ -1,6 +1,14 @@
 @import '../app.css';
 
-img {
+#gallery {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
   max-height: 300px;
   max-width: 300px;
 }
+
+
