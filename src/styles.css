@@ -65,6 +65,6 @@ body {
   }
 
   .close-btn {
-    padding: 0;
+    padding-bottom: 1px;
   }
 }
