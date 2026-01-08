@@ -22,6 +22,13 @@ export class ContactFooter {
     });
   }
 
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
   onSubmit() {
     this.submitted = true;
     if (this.contactForm.valid) {
