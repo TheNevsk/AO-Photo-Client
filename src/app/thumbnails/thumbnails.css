@@ -1,13 +1,5 @@
 /* Gallery-Thumbnails styling */
-h4 {
-  font-weight: normal;
-  margin-top: 0.5rem;
-  font-size: 1.4rem;
-}
-
-a {
-  text-decoration: none;
-}
+@import '../app.css';
 
 .gallery-thumbs {
   display: grid;

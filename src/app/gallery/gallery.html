@@ -1,1 +1,9 @@
-<p>gallery works!</p>
+<nav>
+  <a routerLink=""><h4>← Back to main</h4></a>
+</nav>
+
+<div>
+  @for (i of photoIndexes; track i) {
+    <img src="images/{{name}}/thumbnails/{{name}}{{i+1}}-thumb.PNG" alt="{{i+1}}" />
+  }
+</div>
