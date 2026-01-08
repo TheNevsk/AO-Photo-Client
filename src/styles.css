@@ -63,4 +63,8 @@ body {
   .full-photo {
     max-width: 480px;
   }
+
+  .close-btn {
+    padding: 0;
+  }
 }
