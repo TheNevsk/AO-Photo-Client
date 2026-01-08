@@ -8,6 +8,8 @@ body {
 
 /*gallery image pop up styling*/
 #popup-overlay {
+  touch-action: none;
+  overscroll-behavior: contain;
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.85);
@@ -24,8 +26,7 @@ body {
   box-sizing: border-box;
 }
 
-.full-img {
-  object-fit: contain;
+.full-photo {
   display: block;
   border-radius: 4px;
 }
@@ -36,8 +37,9 @@ body {
   top: 5%;
   right: 3%;
 
-  width: 3vw;
-  height: 3vw;
+  width: 24px;
+  height: 24px;
+  padding-top: 2px;
   border-radius: 50%;
 
   background: rgba(0, 0, 0, 0.45);
@@ -54,4 +56,11 @@ body {
 
 .close-btn:hover {
   background: rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .full-photo {
+    max-width: 480px;
+  }
 }
