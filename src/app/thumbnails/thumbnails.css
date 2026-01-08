@@ -28,11 +28,13 @@
   border-radius: 8px;
 }
 
-.gallery-thumbs .labeled-image:hover > img{
+.gallery-thumbs .labeled-image:hover > img, .gallery-thumbs .labeled-image:active > img{
   transform: scale(1.03);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
   opacity: 0.6;
 }
+
+
 
 .gallery-thumbs .labeled-image .label {
   opacity: 0;
