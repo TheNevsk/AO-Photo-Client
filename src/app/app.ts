@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import {BackendService} from '../shared/services/backend-service';
 import {ContactFooter} from './contact-footer/contact-footer';
 import {Thumbnails} from './thumbnails/thumbnails';
+import {Globals} from '../shared/globals';
 
 @Component({
   standalone: true,
@@ -14,7 +15,7 @@ import {Thumbnails} from './thumbnails/thumbnails';
 export class App {
   protected readonly title = signal('AO-Photo-Client');
   constructor(private server: BackendService) {
-    //acquire contact-me icons from font-awesome
-    // this.server.callPrivateRoute();
+    this.server.getGalleryMetadata().subscribe(res =>
+      Globals.galleryMetadata = new Map<string, number>(Object.entries(res)));
   }
 }

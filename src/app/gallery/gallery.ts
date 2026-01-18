@@ -1,6 +1,6 @@
 import {Component, HostListener} from '@angular/core';
 import {ActivatedRoute, RouterLink} from '@angular/router';
-import {BackendService} from '../../shared/services/backend-service';
+import {Globals} from '../../shared/globals';
 
 @Component({
   selector: 'app-gallery',
@@ -13,15 +13,13 @@ export class Gallery {
   name!: string;
   photoCount: number = 0;
   selectedPhoto: string | null = null;
-  constructor(private route: ActivatedRoute, private server: BackendService) {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.name = params.get('name')!;
-      console.log("name is " + this.name);
-
       this.galleryPath = "images/"+ this.name + "/";
-      this.photoCount = this.server.getGalleryPhotoCount(this.name);
+      this.photoCount = Globals.galleryMetadata.get(this.name) || 0;
     });
   }
 
@@ -29,7 +27,7 @@ export class Gallery {
     return Array.from({ length: this.photoCount }, (_, i) => i);
   }
 
-  //pop-up for clicked pjoto
+  //pop-up for clicked photo
   open(i: number) {
     this.selectedPhoto = this.galleryPath + this.name + i + ".PNG";
   }

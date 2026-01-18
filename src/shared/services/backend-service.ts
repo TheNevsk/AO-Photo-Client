@@ -12,17 +12,8 @@ export class BackendService {
     return this.http.post(url, contactMsg);
   }
 
-  //temporary implementation!! make this return an observable!!
-  public getGalleryPhotoCount(galleryName: string) : number {
-    if (galleryName === 'brands') {
-      return 21;
-    } else {
-      return 0;
-    }
-  }
-
-  public callPrivateRoute() {
-    let url = this.baseUrl + '/private?pwd=aviram';
-    this.http.get(url).subscribe((res) => {console.log(res)});
+  public getGalleryMetadata() : Observable<any> {
+    let url = this.baseUrl + '/api/gallery-metadata'
+    return this.http.get(url);
   }
 }
