@@ -16,6 +16,6 @@ export class App {
   protected readonly title = signal('AO-Photo-Client');
   constructor(private server: BackendService) {
     this.server.getGalleryMetadata().subscribe(res =>
-      Globals.galleryMetadata = new Map<string, number>(Object.entries(res)));
+      Globals.galleryMetadata = new Map<string, number>(Object.entries(JSON.parse(res)) as [string, number][]));
   }
 }
