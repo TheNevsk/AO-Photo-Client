@@ -29,7 +29,7 @@ export class Gallery {
 
   //pop-up for clicked photo
   open(i: number) {
-    this.selectedPhoto = this.galleryPath + this.name + i + ".PNG";
+    this.selectedPhoto = this.galleryPath + this.name + i + ".JPG";
   }
 
   close() {

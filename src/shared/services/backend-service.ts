@@ -15,5 +15,10 @@ export class BackendService {
   public getGalleryMetadata() : Observable<any> {
     let url = this.baseUrl + '/api/gallery-metadata'
     return this.http.get(url);
+
+    // return new Observable(observer => {
+    //   observer.next("{\"black-and-white\":1,\"brands\":21,\"nature\":1,\"people-and-animals\":2,\"still-life\":1}");
+    //   observer.complete();
+    // });
   }
 }

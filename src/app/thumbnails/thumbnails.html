@@ -3,26 +3,17 @@
 </h4>
 
 <nav>
+  @if (galleryNames.length > 0) {
   <div class="gallery-thumbs">
-    <a routerLink="/gallery/brands">
+    @for (name of galleryNames; track name) {
+    <a routerLink="/gallery/{{name}}">
       <div class="labeled-image">
-        <img src="images/zuri.JPG" alt="Brands" />
-        <div class="label center">Brands</div>
+        <img src="images/{{name}}/{{name}}0-gallery-thumb.JPG" alt="{{formatName(name)}}"/>
+       <div class="label center">{{formatName(name)}}</div>
       </div>
     </a>
-
-    <a routerLink="/gallery/animals">
-      <div class="labeled-image">
-        <img src="images/danilof.JPG" alt="Animals" />
-        <div class="label center">Animals</div>
-      </div>
-    </a>
-
-    <a routerLink="/gallery/decadence">
-      <div class="labeled-image">
-        <img src="images/guitar.JPG" alt="Decadence" />
-        <div class="label center">Decadence</div>
-      </div>
-    </a>
+    }
   </div>
+  }
+
 </nav>
