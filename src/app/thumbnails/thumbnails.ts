@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import {RouterLink} from '@angular/router';
-import {Globals} from '../../shared/globals';
+import {ActivatedRoute, RouterLink} from '@angular/router';
 
 
 @Component({
@@ -11,9 +10,8 @@ import {Globals} from '../../shared/globals';
 })
 export class Thumbnails {
   galleryNames: string[] = [];
-
-  ngOnInit() {
-    this.galleryNames = Array.from(Globals.galleryMetadata.keys());
+  constructor(private route: ActivatedRoute) {
+    this.galleryNames = Array.from(this.route.snapshot.data['galleryMetadata'].keys());
   }
 
   formatName(name: string): string {

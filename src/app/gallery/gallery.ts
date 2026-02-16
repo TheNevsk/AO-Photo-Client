@@ -19,7 +19,7 @@ export class Gallery {
     this.route.paramMap.subscribe(params => {
       this.name = params.get('name')!;
       this.galleryPath = "images/"+ this.name + "/";
-      this.photoCount = Globals.galleryMetadata.get(this.name) || 0;
+      this.photoCount = this.route.snapshot.data['galleryMetadata'].get(this.name) || 0;
     });
   }
 
