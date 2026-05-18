@@ -1,6 +1,5 @@
 import {Component, HostListener} from '@angular/core';
 import {ActivatedRoute, RouterLink} from '@angular/router';
-import {Globals} from '../../shared/globals';
 
 @Component({
   selector: 'app-gallery',
